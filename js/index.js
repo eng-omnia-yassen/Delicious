@@ -85,7 +85,7 @@ theBodiesOfPopup.forEach(function(body){
 
 menu(BreakFast)
 
-window.addEventListener("DOMContentLoaded",function(){
+window.addEventListener("load",function(){
     loadingPage.classList.add("hide");
     setTimeout(function(){
         loadingPage.classList.add("d-none");
