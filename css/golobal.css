@@ -4,8 +4,25 @@
     --textColor:#a7a7a7;
 }
 
+
+
+
 body {
     font-family: "DM Sans", sans-serif;
+}
+/* Scrollbar container */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+/* Thumb */
+body::-webkit-scrollbar-thumb {
+  background: var(--mainColor);
+  border-radius: 15px;
+  border: 2px solid var(--mainColor); /* padding effect */
 }
 
 h1,

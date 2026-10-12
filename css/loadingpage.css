@@ -6,31 +6,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    overflow-y:hidden ;
+    opacity: 1;
+    transition-duration: 1s;
+}
+
+.loadingPage.hide{
+    opacity: 0;
 }
 
 .loadingPage .circle{
-    position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 5px solid #fff;
+    border-top: 5px solid #000;
     z-index: 2;
-}
-
-.loadingPage .circle .semiCircle{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #000;
-    z-index: 5;
+    animation:rotate 2s linear infinite ;
 }
 
 
 .loadingPage .text p{
     text-transform: uppercase;
-    /* text- */
-    font-size: 100px;
-    /* border: 1px solid #000; */
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+.loadingPage .text .fillText p{
+    color: #000;
+    animation: rotateY 1.5s linear infinite alternate;
+}
+
+
+
+.loadingPage .text .emptyText p{
+    -webkit-text-stroke: 1px black;
+    color: transparent;
 }

@@ -12,10 +12,21 @@
 .popup[data-popup-name="book"],
 .popup[data-popup-name="product"] {
     display: none;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 0;
 }
 
+.popup::-webkit-scrollbar {
+  width: initial;
+}
+/* Track */
+.popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Thumb */
+.popup::-webkit-scrollbar-thumb {
+  background: transparent;
+}
 .popup[data-popup-name="nav"].active,
 .popup[data-popup-name="book"].active,
 .popup[data-popup-name="product"].active {

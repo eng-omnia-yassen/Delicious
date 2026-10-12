@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="css/loadingpage.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body class="">
     <nav class="navbar navbar-expand-lg navbar-light  position-fixed w-100 py-3">
       <div class="container">
         <a class="navbar-brand">
@@ -63,13 +63,13 @@
       </div>
     </nav>
     <header class="vh-100" id="Home">
-       <div id="sc-carousel" class="h-100 position-relative">
+       <div id="sc-carousel" class="h-100 overflow-hidden position-relative">
             <div class="sc-carousel-indicators d-flex justify-content-end ">
                 <button class="active" data-slide-number="1"></button>
                 <button data-slide-number="2"></button>
                 <button data-slide-number="3"></button>
             </div>
-            <div class="sc-carousel-inner h-100">
+            <div class="sc-carousel-inner  h-100">
                 <div class="sc-carousel-item position-absolute w-100 justify-content-center align-items-center active show" data-slide-number="1">
                     <div class="content text-light text-center d-flex justify-content-center align-items-center flex-column">
                         <div class="title mb-3">
@@ -539,16 +539,30 @@
         </div>
     </div>
    </div>
-   <!-- <div class="loadingPage position-fixed w-100 h-100">
-        <div class="circle">
+   <div class="loadingPage position-fixed w-100 h-100 overflow-hidden">
+        <div class="box d-flex justify-content-center align-items-center flex-column">
+            <div class="circle"></div>
+            <div class="text position-relative">
+                
+                <div class="emptyText position-absolute  d-flex justify-content-center align-items-center">
+                    <p>D</p>
+                    <P>E</P>
+                    <P>L</P>
+                    <P>I</P>
+                    <P>C</P>
+                    <P>I</P>
+                </div>
+                <div class="fillText d-flex justify-content-center align-items-center">
+                    <p>D</p>
+                    <P>E</P>
+                    <P>L</P>
+                    <P>I</P>
+                    <P>C</P>
+                    <P>I</P>
+                </div>
+            </div>
         </div>
-        <div class="semiCircle"></div>
-        <div class="text">
-            <p class="">Delici</p>
-            <p class="">Delici</p>
-
-        </div>
-   </div> -->
+   </div>
    <script src="js/menu (2).js"></script>
    <script src="js/function.js"></script>
    <script src="js/index.js"></script>

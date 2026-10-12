@@ -8,7 +8,9 @@ let carouselSlide=document.querySelector("#sc-carousel"),
     theBodiesOfPopup=document.querySelectorAll(".popup .body"),
     popupLinks=document.querySelectorAll(".popup[data-popup-name='nav'] ul li a"),
     navOfMenuElements=document.querySelectorAll("#Menu .navMenu li"),
-    menuContainer=document.querySelectorAll("#Menu .part");
+    menuContainer=document.querySelectorAll("#Menu .part"),
+    loadingPage=document.querySelector(".loadingPage");
+    
     scrollOfNav();
 nextBtn.addEventListener("click",function(){
     let currentSlide=document.querySelector("#sc-carousel .sc-carousel-item.active"),
@@ -33,7 +35,7 @@ carouselIndicators.forEach(function(indicator){
 window.addEventListener("scroll",function(){
     scrollOfNav()
     sections.forEach(function(section){
-        changActiveWhileScroll(section,navEle);
+        changActiveWhileScroll(section);
     })
 
     
@@ -82,3 +84,10 @@ theBodiesOfPopup.forEach(function(body){
 })
 
 menu(BreakFast)
+
+window.addEventListener("DOMContentLoaded",function(){
+    loadingPage.classList.add("hide");
+    setTimeout(function(){
+        loadingPage.classList.add("d-none");
+    },1000)
+})
