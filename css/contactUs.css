@@ -1,0 +1,80 @@
+#ContactUs{
+    background-image: url("../images/contact-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+
+#ContactUs::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ContactUs form{
+    width: 500px;
+    background-color: var(--bgColor);
+    background-image: url("../images/bg.png");
+}
+
+#ContactUs form::before,
+#ContactUs form::after{
+    content: "";
+    display: block;
+    background-image: url("../images/pattern-9.svg");
+    background-size: cover;
+    background-position: center;
+    width: 15px;
+    height: 100%;
+    position:absolute;
+    top: 0;
+}
+
+#ContactUs form::before{
+    left: 0;
+}
+
+#ContactUs form::after{
+    right: 0;
+}
+
+#ContactUs form .head>*{
+    margin-bottom: 20px;
+}
+
+#ContactUs form .head p.spans{
+ column-gap: 10px;   
+}
+
+#ContactUs form .head p>span{
+    width: 10px;
+    height: 10px;
+
+}
+
+#ContactUs form .body .formGroup input,
+#ContactUs form .body .formGroup textarea{
+    border-color: var(--textColor);
+    color: var(--textColor);
+}
+
+#ContactUs form .body .formGroup input.form-control:focus ,
+#ContactUs form .body .formGroup textarea.form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+#ContactUs form .body .formGroup textarea{
+    resize: none;
+    height: 150px;
+}
+
+#ContactUs .container>p{
+    font-size: 16px;
+}

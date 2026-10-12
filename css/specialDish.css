@@ -1,0 +1,63 @@
+#SpecialDish{
+    padding: 0px;
+}
+
+#SpecialDish .part1{
+    height: 100vh;
+}
+
+#SpecialDish .part1 .item{
+    background-image: url("../images/special-dish.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#SpecialDish .part2 {
+    background-color: var(--bgColor);
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#SpecialDish .part2 .item{
+    width: 65%;
+}
+
+#SpecialDish .part2 .item .content>*{
+    margin-bottom: 15px;
+}
+
+#SpecialDish .part2 .item .content > img{
+    top: 0px;
+    left: -45px;
+    animation-name: ups-downs2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#SpecialDish .part2 .item .title h6{
+    font-size: 16px;
+}
+
+#SpecialDish .part2 .item .title img{
+    width:100px ;
+
+}
+
+#SpecialDish .part2 .item p{
+    line-height: 2.2;
+}
+
+#SpecialDish .part2 .item h3{
+    column-gap: 10px;
+}
+
+
+
+
+

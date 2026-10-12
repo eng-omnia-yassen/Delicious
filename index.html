@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/golobal.css">
+    <link rel="stylesheet" href="css/keyframs.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/ourStory.css">
+    <link rel="stylesheet" href="css/specialDish.css">
+    <link rel="stylesheet" href="css/Menu.css">
+    <link rel="stylesheet" href="css/ourChefs.css">
+    <link rel="stylesheet" href="css/contactUs.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/loadingpage.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  position-fixed w-100 py-3">
+      <div class="container">
+        <a class="navbar-brand">
+            <img src="images/logo.png" class="img-fluid">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav d-lg-none d-xl-flex mx-auto  mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0 active" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#AboutUs">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#OurStory">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#SpecialDish">Special Dish</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#Menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#OurChefs">Our Chefs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link firstLine secondLine p-0" href="#ContactUs">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn " onclick="openPopup('nav')">
+            <span class="d-block"></span>
+            <span class="d-block"></span>
+            <span class="d-block"></span>
+        </button>
+        
+      </div>
+    </nav>
+    <header class="vh-100" id="Home">
+       <div id="sc-carousel" class="h-100 position-relative">
+            <div class="sc-carousel-indicators d-flex justify-content-end ">
+                <button class="active" data-slide-number="1"></button>
+                <button data-slide-number="2"></button>
+                <button data-slide-number="3"></button>
+            </div>
+            <div class="sc-carousel-inner h-100">
+                <div class="sc-carousel-item position-absolute w-100 justify-content-center align-items-center active show" data-slide-number="1">
+                    <div class="content text-light text-center d-flex justify-content-center align-items-center flex-column">
+                        <div class="title mb-3">
+                            <h6 class="mainColor">DELIGHTFUL EXPERIENCE</h6>
+                            <img src="images/separator.svg" alt="separator" class="">
+                        </div>
+                        <h1 class=" pb-0 fw-semibold">Flavors Inspired By The Seasons</h1>
+                        <p class="py-2">Come with family & feel the joy of mouthwatering food</p>
+                        <a href="#Menu" class="mainButton btn"><span class="text">VIEW OUR MENU</span></a>
+                    </div>
+                </div>
+                <div class="sc-carousel-item position-absolute w-100 justify-content-center align-items-center"  data-slide-number="2">
+                    <div class="content text-light text-center d-flex justify-content-center align-items-center flex-column">
+                        <div class="title mb-3">
+                            <h6 class="mainColor">AMAZING & DELICIOUS</h6>
+                            <img src="images/separator.svg" alt="separator" class="">
+                        </div>
+                        <h1 class=" pb-0 fw-semibold">Where Every Flavor Tells A Story</h1>
+                        <p class="py-2">Come with family & feel the joy of mouthwatering food</p>
+                        <a href="#Menu" class="mainButton btn"><span class="text">VIEW OUR MENU</span></a>
+                    </div>
+                </div>
+                <div class="sc-carousel-item position-absolute w-100 justify-content-center align-items-center" data-slide-number="3">
+                    <div class="content text-light text-center d-flex justify-content-center align-items-center flex-column">
+                        <div class="title mb-3">
+                        <h6 class="mainColor">TRADATIONAL & HYGINE</h6>
+                        <img src="images/separator.svg" alt="separator" class="">
+                    </div>
+                    <h1 class=" pb-0 fw-semibold">For The Love Of Delicious Food</h1>
+                    <p class="py-2">Come with family & feel the joy of mouthwatering food</p>
+                    <a href="#Menu" class="mainButton btn"><span class="text">VIEW OUR MENU</span></a>    
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="position-absolute prev">
+                    <i class="fa-solid fa-chevron-left position-relative"></i>
+                </button>
+                <button class="position-absolute next">
+                    <i class="fa-solid fa-chevron-right position-relative"></i>
+                </button>
+            </div>
+            <div class="fixed position-absolute text-dark text-center" onclick="openPopup('book')">
+                <div class="book d-flex justify-content-center align-items-center flex-column p-sm-1">
+                    <img src="images/book-icon-1.png" alt="book-icon-1" class="my-2">
+                    <p class="w-75 mb-2 m-auto">BOOK A TABLE</p>
+                </div>
+            </div>
+       </div> 
+    </header>
+    <section id="AboutUs" class="overflow-hidden text-light">
+        <div class="container position-relative text-center">
+            <div class="content mb-5 mb-lg-0">
+                <div class="title mb-3">
+                    <h6 class="mainColor">FLAVORS FOR ROYALTY</h6>
+                    <img src="images/separator.svg" alt="separator" class="">
+                </div>
+                <h2 class="mb-4 mainHeader">We Offer Top Notch</h2>
+                <p class="">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
+            </div>
+                
+            <div class="row row1">
+                    <div class="col-lg-4 d-flex part2 justify-content-center align-items-center flex-column">
+                        <div class="offer">
+                            <div class="item">
+                                <div class="image my-5 img hover">
+                                    <img src="images/offer-image-1.jpg" alt="offer-image" class="img-fluid position-relative">
+                                </div>
+                            </div>
+                            <div class="body">
+                                <h3 class="mt-2">Breakfast</h3>
+                                <a href="#Menu" class="text-decoration-none mainColor firstLine secondLine">VIEW MENU</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex part2 justify-content-center align-items-center flex-column">
+                        <div class="offer">
+                            <div class="item">
+                                <div class="image my-5 img hover">
+                                    <img src="images/offer-image-2.jpg" alt="offer-image" class="img-fluid position-relative">
+                                </div>
+                            </div>
+                            <div class="body">
+                                <h3 class="mt-2">Appetizers</h3>
+                                <a href="#Menu" class="text-decoration-none mainColor firstLine secondLine">VIEW MENU</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex part2 justify-content-center align-items-center flex-column">
+                        <div class="offer">
+                            <div class="item">
+                                <div class="image my-5 img hover">
+                                    <img src="images/offer-image-3.jpg" alt="offer-image" class="img-fluid position-relative">
+                                </div>
+                            </div>
+                            <div class="body">
+                                <h3 class="mt-2">Drinks</h3>
+                                <a href="#Menu" class="text-decoration-none mainColor firstLine secondLine">VIEW MENU</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>        
+    </section>
+    <section id="OurStory">
+        <div class="content text-light text-center">
+            <div class="container">
+                <div class="row row1">
+                    <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-center part1 text-center">
+                        <div class="item">
+                            <div class="title title1 mb-3">
+                                <h6 class="mainColor">OUR STORY</h6>
+                                <img src="images/separator.svg" alt="separator" class="">
+                            </div>
+                            <h2 class="mainHeader">Every Flavor Tells A Story</h2>
+                            <p class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries, but also the leap into.</p>
+                            <div class="call">
+                                <p class="fw-bold m-auto">Book Through Call</p>
+                                <a href="tel:+20-102-108-0042" class="mainColor fs-4 m-auto text-decoration-none firstLine secondLine">+20-102-108-0042</a>
+                            </div>
+                            <button class="mainButton btn"><span class="text">Read More</span></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 d-flex justify-content-center align-items-center part2">
+                        <div class="item position-relative">
+                            <img src="images/image-1.jpg" alt="image-2" class="">
+                            <div class="image img position-absolute">
+                                <img src="images/image-2.jpg" alt="image-2" class=" position-relative">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="SpecialDish" class="overflow-hidden">
+        <div class="row h-100">
+            <div class="col-md-6 col-lg-6 px-0 part1">
+                <div class="item h-100"></div>
+            </div>
+            <div class="col-md-6 col-lg-6 px-0 py-4  py-lg-0 part2 d-flex justify-content-center align-items-center">
+                <div class="item">
+                    <div class="container">
+                        <div class="content text-light position-relative">
+                            <img src="images/badge-2.png" alt="badge-2" class="img-fluid position-absolute">
+                            <div class="title title1 text-start mb-3">
+                                <h6 class="mainColor">SPECIAL DISH</h6>
+                                <img src="images/separator.svg" alt="separator" class="">
+                            </div>
+                            <h2 class="mainHeader">Lobster Tortellini</h2>
+                            <p class="">Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type.</p>
+                            <h3 class="d-flex align-items-center">
+                                <span class="d-block text-decoration-line-through textColor fs-5">$40.00</span>
+                                <span class="d-block mainColor fs-3">$20.00</span>
+                            </h3>
+                            <a href="#Menu" class="mainButton btn  mt-2 mb-0"><span class="text">VIEW ALL MENU</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Menu" class="position-relative">
+        <div class="container position-relative ">
+            <div class="content">
+                <div class="head mb-5">
+                    <div class="title mb-3">
+                        <h6 class="mainColor">FLAVORS FOR ROYALTY</h6>
+                        <img src="images/separator.svg" alt="separator" class="">
+                    </div>
+                    <h2 class="mb-4 mainHeader">Delicious Menu</h2>
+                    <div class="table-responsive">
+                        <ul class="navMenu py-4 list-unstyled d-flex justify-content-center align-items-center text-light fs-5">
+                            <li class="firstLine secondLine  active"><span class="">BreakFast</span></li>
+                            <li class="firstLine secondLine "><span class="squares">Lunch</span></li>
+                            <li class="firstLine secondLine "><span class="squares">Dinner</span></li>
+                            <li class="firstLine secondLine "><span class="squares">Drinks</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="body position-relative">
+                    <div class="row row1">
+                        <div class="col-md-6 col-lg-6 part1 part">
+                        </div>
+                        <div class="col-md-6 col-lg-6 part2 part">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section id="OurChefs" class="">
+    <div class="content position-relative">
+        <div class="container">
+            <div class="title mb-3">
+                <h6 class="mainColor">EXPERIENCED TEAM</h6>
+                <img src="images/separator.svg" alt="separator" class="">
+            </div>
+            <h2 class="text-center mainHeader text-light mb-4">Meet Our Chef</h2>
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="item">
+                        <div class="card bg-transparent">
+                            <div class="image rounded-3 overflow-hidden position-relative">
+                                <img src="images/chef-1.jpg"  alt="chef-1" class="card-img-top img-fluid">
+                                <div class="layout  d-flex justify-content-center align-items-center">
+                                    <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center column-gap-5">
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-light">Willium Joe</h2>
+                                <span class="mainColor mb-2">MASTER CHEF</span>
+                                <p class="card-text textColor">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="item">
+                        <div class="card bg-transparent">
+                            <div class="image rounded-3 overflow-hidden position-relative">
+                                <img src="images/chef-2.jpg"  alt="chef-1" class="card-img-top img-fluid">
+                                <div class="layout  d-flex justify-content-center align-items-center">
+                                    <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center column-gap-5">
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-light">Steave Den</h2>
+                                <span class="mainColor mb-2">MASTER CHEF</span>
+                                <p class="card-text textColor">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="item">
+                        <div class="card bg-transparent">
+                            <div class="image rounded-3 overflow-hidden position-relative">
+                                <img src="images/chef-3.png"  alt="chef-1" class="card-img-top img-fluid">
+                                <div class="layout  d-flex justify-content-center align-items-center">
+                                    <ul class="list-unstyled mb-0 d-flex justify-content-center align-items-center column-gap-5">
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        </li>
+                                        <li class="d-flex justify-content-center align-items-center">
+                                        <a href="#">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-light">Oliver Joe</h2>
+                                <span class="mainColor mb-2">MASTER CHEF</span>
+                                <p class="card-text textColor">Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+   <section id="ContactUs" class="d-flex flex-column justify-content-center align-items-center ">
+       <div class="container ">
+         <form action="" class=" m-auto py-5 px-md-5 px-4 mb-5 text-center position-relative textColor" >
+            <div class="container">
+                <div class="head ">
+                    <img src="images/logo.png" alt="logo" class="img-fluid ">
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i> Delicious City, London 9578, UK</p>
+                    <p><i class="fa-solid fa-clock"></i> Daily : 8.00 am to 10.00 pm</p>
+                    <p><i class="fa-solid fa-envelope"></i> booking@restaurant.com</p>
+                    <p class="spans d-flex justify-content-center align-items-center">
+                        <span class="squares"></span>
+                        <span class="squares"></span>
+                        <span class="squares"></span>
+                    </p>
+                </div>
+                <div class="body">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="formGroup mb-4">
+                                <input type="text" class="form-control bg-transparent " name="name" id="name" placeholder="Name...">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="formGroup mb-4">
+                                <input type="email" class="form-control bg-transparent " name="email" id="email" placeholder="Email...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formGroup mb-4">
+                          <textarea class="form-control bg-transparent " name="message" id="Message" placeholder="Message..."></textarea>
+                    </div>
+                    <button class="mainButton btn w-100"><span class="text">Send Message</span></a>
+                </div>
+            </div>
+        </form>
+        <p class="text-center text-light position-relative">© 2023 Restaurant. All Rights Reserved | Created by <span class="mainColor">SemiCode</span></p>
+    </div>
+   </section>
+   <div class="popup" data-popup-name="book" onclick="closePopup()">
+    <div class="body py-4  px-3 position-relative text-center textColor">
+        <div class="container">
+            <div class="content">
+                <div class="title mb-3 ">
+                    <h6 class="mainColor">RESERVATION</h6>
+                    <img src="images/separator.svg" alt="separator" class="">
+                </div>
+                <i class="fa-regular fa-circle-xmark text-light position-absolute" onclick="closePopup()"></i>
+                <div class="top mb-5">
+                    <h2 class="text-light mainHeader">Book A Table</h2>
+                    <p class="mb-1">Restaurant will be open every day <span class="mainColor">from 8:00 AM to 10:00 PM</span>.</p> 
+                    <p class="mb-1">Online reservations are available <span class="mainColor">from 7:00 AM to 9:00 PM</span>.</p>
+                    <p class="mx-auto text">All booking payments are secured by credit card. No extra charges apply to online bookings. The booking is non-refundable.</p>
+                    <p>Booking request <a href="tel:+20-102-108-0042" class="mainColor text-decoration-none">+20-102-108-0042</a> or fill out the order form</p>
+                </div>
+                <div class="bottom w-100">
+                    <form action="" class="text-light">
+                        <div class="row part1">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="formGroup">
+                                      <input type="text" class="form-control bg-transparent" id="name" name="name" placeholder="Reservation Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="formGroup">
+                                      <input type="text" class="form-control bg-transparent" id="Phone" name="Phone" placeholder="Phone Number...">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="formGroup">
+                                      <input type="number" class="form-control bg-transparent" id="seats" name="seats" placeholder="Seats...">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="formGroup">
+                                      <input type="datetime-local" class="form-control bg-transparent fw-light" id="date" name="date" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formGroup mt-4">
+                              <textarea class="form-control bg-transparent" id="massage" name="massage" placeholder="Notes Massage..."></textarea>
+                        </div>
+                        <button class="mainButton btn mt-4"><span class="text">Book A Table</span></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div class="popup" data-popup-name="product" onclick="closePopup()">
+    <div class="body py-4  px-3 position-relative text-center textColor">
+        <div class="container">
+            <div class="content">
+                <div class="title mb-3 ">
+                    <h6 class="mainColor">SPECIAL SELECTION</h6>
+                    <img src="images/separator.svg" alt="separator" class="">
+                </div>
+                <i class="fa-regular fa-circle-xmark text-light position-absolute" onclick="closePopup()"></i>
+                <div class="box">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <div class="popup" data-popup-name="nav" onclick="closePopup()">
+    <div class="body py-5  px-3 position-relative textColor">
+        <div class="container">
+            <div class="content text-center">
+                <div class="top mt-4 mb-2 ">
+                    <img src="images/logo.png" alt="logo" class="img-fluid d-block m-auto mb-4">
+                    <img src="images/sidebar-image.jpg" alt="sidebar-image" class="circleImg d-block m-auto rounded-circle mb-4">
+                    <i class="fa-regular fa-circle-xmark text-light position-absolute" onclick="closePopup()"></i>
+                    <ul class="navbar-nav list-unstyled w-50 m-auto mb-4 d-flex flex-column justify-content-center align-content-start">
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#Home" class="text-decoration-none squares active">Home</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#AboutUs" class="text-decoration-none">About Us</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#OurStory" class="text-decoration-none">Our Story</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#SpecialDish" class="text-decoration-none">Special Dish</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#Menu" class="text-decoration-none">Menu</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#OurChefs" class="text-decoration-none">Our Chefs</a>
+                        </li>
+                        <li class="d-flex justify-content-start nav-item">
+                            <a href="#ContactUs" class="text-decoration-none">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom w-100">
+                    <h2 class="mainHeader fs-1 mb-2 ">Visit Us</h2>
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i> Delicious City, London 9578, UK</p>
+                    <p><i class="fa-solid fa-clock"></i> Daily : 8.00 am to 10.00 pm</p>
+                    <p><i class="fa-solid fa-envelope"></i> booking@restaurant.com</p>
+                    <p class="spans  mb-4 d-flex justify-content-center align-items-center">
+                        <span class="squares"></span>
+                    </p>
+                    <p class="text-light fs-6 fw-bold mb-0 ">Booking Request</p>
+                    <a href="tel:+20-102-108-0042" class="mainColor firstLine secondLine fs-3 text-decoration-none">+20-102-108-0042</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- <div class="loadingPage position-fixed w-100 h-100">
+        <div class="circle">
+        </div>
+        <div class="semiCircle"></div>
+        <div class="text">
+            <p class="">Delici</p>
+            <p class="">Delici</p>
+
+        </div>
+   </div> -->
+   <script src="js/menu (2).js"></script>
+   <script src="js/function.js"></script>
+   <script src="js/index.js"></script>
+</body>
+</html>

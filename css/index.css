@@ -1,0 +1,235 @@
+
+.navbar{
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.navbar.scroll{
+    background-color: var(--bgColor);
+}
+
+.navbar .navbar-brand{
+    width: 12%;
+}
+
+.navbar .navbar-nav{
+    column-gap: 15px;
+}
+
+.navbar .navbar-nav a.nav-link{
+    color: #fff;
+    /* transition-duration: .4s; */
+}
+
+.navbar-light .navbar-nav a.nav-link.active {
+    color: var(--mainColor);
+}
+
+.navbar-light .navbar-nav a.nav-link:focus{
+    color: var(--mainColor);
+
+}
+.navbar .navbar-nav a.nav-link:hover{
+    color: #fff;
+}
+
+.navbar button{
+    width: 30px;
+    height: 20px;
+    row-gap: 4px;
+    padding-inline: 0;
+    position: relative;
+}
+
+.navbar button:focus{
+    box-shadow: none;
+}
+
+.navbar  button span{
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.navbar  button span:nth-last-of-type(1){
+    animation: left-right .8s linear .2s  infinite alternate;
+    bottom: 100%;
+}
+
+.navbar button span:nth-last-of-type(2){
+    animation: left-right .8s linear .4s  infinite alternate;
+    bottom: 50%;
+}
+
+.navbar button span:nth-last-of-type(3){
+    animation: left-right .8s linear .8s  infinite alternate;
+    bottom: 0%;
+}
+
+.navbar button span:nth-last-of-type(3){
+    animation: left-right .5s linear .6s  infinite alternate;
+}
+
+
+#sc-carousel .sc-carousel-indicators{
+    z-index: 10;
+    position: absolute;
+    column-gap: 10px;
+    bottom: 15px;
+    right: 20px;
+}
+#sc-carousel .sc-carousel-indicators >*{
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+}
+#sc-carousel .sc-carousel-indicators button.active{
+    color: var(--mainColor);
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0;
+    display: none;
+    transform: scale(1.4);
+    transition-duration: .5s;
+} 
+#sc-carousel .sc-carousel-inner .sc-carousel-item.active{
+    display: flex;
+    z-index: 2;
+}
+#sc-carousel .sc-carousel-inner .sc-carousel-item.active.show{
+    transform: scale(1);
+    opacity: 1;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(1){
+    background-image: url("../images/slider-1.jpg");
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(2){
+    background-image: url("../images/slider-2.jpg");
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(3){
+    background-image: url("../images/slider-3.jpg");
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item .title img{
+    width: 35%;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item .content>*{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item.show .content>*{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-duration: 1s;
+    transition-delay:.5s ;
+}
+#sc-carousel .sc-carousel-inner .sc-carousel-item.show .content h1{
+    transition-delay: .8s;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item.show .content p{
+    transition-delay: 1s;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item.show .content a{
+    transition-property: all;
+    transition-timing-function: initial;
+    transition-delay: 1.2s;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item .content h1{
+    width: 70%;
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(1) .content h1,
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(2) .content h1{
+    font-size: clamp(30px,8vw,80px);
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item:nth-of-type(3) .content h1{
+    font-size: clamp(35px,8vw,80px);
+}
+
+#sc-carousel .sc-carousel-inner .sc-carousel-item .content p{
+    font-size: clamp(12px,3vw,20px);
+}
+
+#sc-carousel .buttons button{
+    z-index: 50;
+    background: transparent;
+    color: var(--mainColor);
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    padding: 10px;
+    transition-duration: 1s;
+    border: 1px solid var(--mainColor);
+}
+
+#sc-carousel .buttons button:hover{
+    color: #fff;
+    background-color: var(--mainColor);
+}
+
+#sc-carousel .buttons button.prev{
+    left: 20px;
+}
+
+#sc-carousel .buttons button.next{
+    right: 20px;
+}
+
+
+#sc-carousel .buttons button i{
+    transform: rotate(45deg);
+}
+
+#sc-carousel .fixed{
+    width: 100px;
+    height: 100px;
+    bottom: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+#sc-carousel .fixed .book::before{
+    content: "";
+    display: block;
+    border: 1px solid var(--mainColor);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sc-carousel .fixed .book{
+    background-color: var(--mainColor);
+    width: 100%;
+    height: 100%;
+}
+
+#sc-carousel .fixed .book img{
+    width: 40%;
+}
+
+
+#sc-carousel .fixed .book p{
+    font-size: clamp(10px,2vw,12px);
+}

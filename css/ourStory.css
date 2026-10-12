@@ -1,0 +1,77 @@
+#OurStory{
+    background-color: #171819;
+}
+
+#OurStory .content .container .part1 .item>* {
+    margin-bottom: 10px;
+}
+
+
+#OurStory .content .container .part1 h2{
+    width: 65%;
+    margin: auto;
+    /* transform: scale(1.3); */
+}
+
+#OurStory .content .container .part1 p{
+    width: 75%;
+
+    margin: auto;
+}
+
+#OurStory .content .container .part1 a:hover{
+    color: var(--mainColor);
+}
+
+#OurStory .content .container .part1 .item button{
+    padding: 10px 35px;
+    margin-top:10px;
+    margin-bottom: 0px;
+}
+
+#OurStory .content .container .part2 .item >img{
+    width: 80%;
+}
+
+#OurStory .content .container .part2 .image img{
+    width: 75%;
+}
+
+#OurStory .content .container .part2 .image.img{
+    bottom: -20px;
+    left: -20px;
+    transform: translateY(20px);
+}
+
+
+#OurStory .content .container .part2 .image.img::before{
+    height: 120%;
+}
+
+#OurStory .content .container .part2 .item::before,
+#OurStory .content .container .part2 .item::after{
+
+    content: "";
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -50px;
+    right: 0;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+}
+
+#OurStory .content .container .part2 .item::before{
+    background-image: url("../images/badge-1.png");
+}
+
+#OurStory .content .container .part2 .item::after{
+    background-image: url("../images/badge-1-bg.png");
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}

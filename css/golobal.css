@@ -1,0 +1,182 @@
+:root {
+    --mainColor: #e3c590;
+    --bgColor:#171819;
+    --textColor:#a7a7a7;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Forum", serif;
+}
+
+i{
+    cursor: pointer;
+}
+
+.mainColor{
+    color: #e4c590;
+}
+
+.mainButton {
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
+    position: relative;
+    overflow: hidden;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+    font-size: clamp(12px,2vw,16px);
+}
+
+.mainButton::before,
+.mainButton::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--mainColor);
+    background-color: var(--mainColor);
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    transition-duration: 1s;
+}
+
+.mainButton::before {
+    top: -100%;
+}
+
+.mainButton::after {
+    bottom: -100%;
+}
+
+.mainButton:hover::before {
+    top: 0%;
+}
+
+.mainButton:hover::after {
+    bottom: 0%;
+}
+
+.mainHeader{
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+.text{
+position: relative;
+}
+
+.mainButton:hover .text{
+    color: black;
+    z-index: 11;
+}
+
+.squares{
+    position: relative;
+}
+
+.squares::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid var(--mainColor);
+    top: 0;
+    left: 0;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+.title{
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.title h6{
+    font-size: clamp(14px,2vw,16px);
+}
+
+.title img{
+    width: 100px;
+}
+
+.title.title1 h6{
+    font-size: 16px;
+}
+
+.title.title1 img{
+    width: 20%;
+}
+
+section{
+    padding-block: 80px;
+}
+
+.textColor{
+    color: var(--textColor);
+}
+
+.img,
+.firstLine,
+.secondLine{
+    position: relative;
+}
+
+.img::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../images/pattern-8.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 150%;
+    transition-duration: .5s;
+}
+
+.img.hover:hover::before{
+    transform: translate(-50%,-50%) rotateY(180deg);
+}
+
+.firstLine::before,
+.secondLine::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--mainColor);
+    transition-duration: .5s;
+}
+
+.firstLine::before{
+    top: 115%;
+}
+
+.secondLine::after{
+    top: 130%;
+}
+
+.firstLine:hover::before,
+.firstLine.active::before,
+.secondLine.active:after,
+.secondLine:hover:after{
+    width: 100%;
+}

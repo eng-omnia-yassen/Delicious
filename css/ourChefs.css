@@ -1,0 +1,103 @@
+#OurChefs {
+    background-color: var(--bgColor);
+    background-image: url(../images/bg.png);
+}
+
+#OurChefs .item .card .image img{
+    transition-duration: 1s;
+    transform: rotate(0deg) scale(1);
+}
+
+#OurChefs .item:hover .card .image img{
+    transform: rotate(1deg) scale(1.05);
+}
+
+#OurChefs .item .card .image .layout{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%) scale(0);
+    background-color: rgba(103, 107, 112,.3);
+    transition-duration: .5s;
+}
+
+#OurChefs .item:hover .card .image .layout{
+    transform: translate(-50%,-50%) scale(1);
+    
+}
+
+#OurChefs .item .card .image .layout ul{
+    column-gap: 10px;
+    opacity: 0;
+}
+
+#OurChefs .item:hover .card .image .layout ul{
+    transition-delay: .5s;
+    transition-duration: .5s;
+    opacity: 1;
+}
+
+
+#OurChefs .item .card .image .layout li {
+    background-color: black;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    transition-duration:1s ;
+}
+
+#OurChefs .item .card .image .layout li:hover:nth-of-type(1) {
+    background-color:#1877f2 ;
+}
+
+#OurChefs .item .card .image .layout li:hover:nth-of-type(2) {
+    background-color:#fff ;
+}
+
+#OurChefs .item .card .image .layout li:hover:nth-of-type(3) {
+    background-color:#e4405f ;
+}
+
+#OurChefs .item .card .image .layout li:hover:nth-of-type(4) {
+    background-color: #0a66c2;
+}
+#OurChefs .item .card .image .layout li a{
+    transition-duration:1s ;
+}
+
+#OurChefs .item .card .image .layout li:nth-of-type(1) a{
+    color:#1877f2 ;
+}
+
+#OurChefs .item .card .image .layout li:nth-of-type(2) a{
+    color:#fff ;
+}
+
+#OurChefs .item .card .image .layout li:nth-of-type(3) a{
+    color: #e4405f;
+}
+
+#OurChefs .item .card .image .layout li:nth-of-type(4) a{
+    color: #0a66c2;
+}
+
+#OurChefs .item .card .image .layout li:hover a{
+    color: #fff;
+}
+
+#OurChefs .item .card .image .layout li:hover:nth-of-type(2) a{
+    color: black;
+}
+
+#OurChefs .item .card .card-body span{
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    display: block;
+}
+
+#OurChefs .item .card .card-body p{
+    font-size: 14px;
+}

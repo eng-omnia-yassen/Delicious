@@ -1,0 +1,36 @@
+.loadingPage{
+    background-color: var(--mainColor);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.loadingPage .circle{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    z-index: 2;
+}
+
+.loadingPage .circle .semiCircle{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    z-index: 5;
+}
+
+
+.loadingPage .text p{
+    text-transform: uppercase;
+    /* text- */
+    font-size: 100px;
+    /* border: 1px solid #000; */
+}

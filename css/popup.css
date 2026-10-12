@@ -1,0 +1,201 @@
+.popup {
+    background-color: rgba(227, 197, 144, .5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition-duration: .5s;
+}
+.popup[data-popup-name="nav"],
+.popup[data-popup-name="book"],
+.popup[data-popup-name="product"] {
+    display: none;
+    overflow-y: auto;
+    opacity: 0;
+}
+
+.popup[data-popup-name="nav"].active,
+.popup[data-popup-name="book"].active,
+.popup[data-popup-name="product"].active {
+    display: block;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+.popup .body {
+    background-color: var(--bgColor);
+    width: 600px;
+    border-radius: 10px;
+    margin: 50px auto;
+}
+
+
+.popup[data-popup-name="book"] .body,
+.popup[data-popup-name="product"] .body {
+
+    transform: translateY(-300px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+
+.popup[data-popup-name="book"].show .body,
+.popup[data-popup-name="product"].popup.show .body {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.popup[data-popup-name="nav"] .body {
+    transform: translateX(-300px);
+    opacity: 0;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+.popup[data-popup-name="nav"].show .body{
+    transform: translate(0);
+    opacity: 1;
+}
+
+
+.popup[data-popup-name="nav"] .body{
+    width: 400px;
+    margin: 0;
+    background-image: url("../images/bg.png");
+}
+
+.popup .body .content i {
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+
+.popup .body .content .top>* {
+    margin-bottom: 20px;
+}
+
+
+.popup[data-popup-name="book"] .body .content .top p.text{
+    width: 95%;
+}
+
+.popup[data-popup-name="book"] .body .content .top a:hover{
+    color: var(--mainColor);
+}
+
+.popup[data-popup-name="product"] .body .content .top .mainHeader {
+    font-size: 40px;
+}
+
+
+
+.popup .body .content .bottom .part1 {
+    row-gap: 25px;
+}
+
+.popup .body .content .bottom .part1 .form-control {
+    border-color: var(--textColor);
+    color: var(--textColor);
+
+}
+
+.popup .body .content .bottom .part1 .form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.popup .body .content .bottom textarea {
+    resize: none;
+    height: 150px;
+}
+
+.popup[data-popup-name="product"] .body .content .bottom img {
+    border-radius: 15px;
+}
+
+.popup[data-popup-name="product"] .body .content .bottom .prev,
+.popup[data-popup-name="product"] .body .content .bottom .next {
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg) translateX(-50%);
+    background-color: #e4c590;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup[data-popup-name="product"] .body .content .bottom .prev{
+    left: 10%;
+}
+
+.popup[data-popup-name="product"] .body .content .bottom .next {
+    right: 5%;
+}
+
+.popup[data-popup-name="product"] .body .content .bottom .prev i,
+.popup[data-popup-name="product"] .body .content .bottom .next i{
+    color: #fff;
+    font-size: 16px;
+    transform: rotate(-45deg);
+}
+
+.popup[data-popup-name="product"] .body .content .bottom .image p{
+    background-color: #e4c590;
+    top: 20px;
+    right: 0;
+    padding: 8px;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.popup[data-popup-name="nav"] .body .top .circleImg{
+    width: 40%;
+}
+
+.popup[data-popup-name="nav"] .body .top ul{
+    border: 1px solid;
+    border-right: var(--textColor);
+    border-left: var(--textColor);
+}
+
+.popup[data-popup-name="nav"] .body .top ul li{
+    padding-block: 10px;
+}
+
+.popup[data-popup-name="nav"] .body .top ul li:not(:last-child){
+    border-bottom: 2px solid var(--textColor);
+}
+
+.popup[data-popup-name="nav"] .body .top ul a{
+    color: #fff;
+    font-size: 18px;
+}
+
+.popup[data-popup-name="nav"] .body .top ul a.active,
+.popup[data-popup-name="nav"] .body .top ul a:hover{
+    color: var(--mainColor);
+}
+
+.popup[data-popup-name="nav"] .body .top ul a.active.squares{
+    padding-left:20px ;
+}
+
+.popup[data-popup-name="nav"] .body .top ul a.active.squares::after{
+    top: 8px;
+}
+
+.popup[data-popup-name="nav"] .body .bottom p>span{
+    width: 10px;
+    height: 10px;
+}

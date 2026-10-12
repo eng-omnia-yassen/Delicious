@@ -1,0 +1,91 @@
+#AboutUs{
+    background-image: url("../images/bg.png");
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+#AboutUs::before,
+#AboutUs::after{
+    content: "";
+    width: 100%;
+    height: 45%;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    animation-name: ups-downs;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+#AboutUs::before{
+    background-image: url("../images/bg-1.png");
+    height: 40%;
+    left: 75%;
+    top: 20px;
+}
+
+#AboutUs::after{
+    background-image: url("../images/bg-2.png");
+    width: 250px;
+    top: 65%;
+}
+
+#AboutUs .container{
+    z-index: 10;
+}
+
+#AboutUs .content>p{
+    width: 35%;
+    margin: auto;
+}
+
+#AboutUs .container .part2:not(:nth-of-type(2)) .offer{
+    transform: translateY(-50px);
+}
+
+#AboutUs .container .part2:nth-of-type(2) .offer{
+    transform: translateY(50px);
+}
+
+
+#AboutUs .container .item{
+    overflow: hidden;
+    position: relative;
+}
+
+#AboutUs .container .item::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#AboutUs .container .item::after{
+    background-color: rgba(225,225,225,0.5);
+    transform: translate(-550%,-50%) rotate(30deg);
+    width: 25%;
+    height: 150%;
+}
+
+#AboutUs .container .item:hover::after{
+    transform: translate(450%,-50%) rotate(30deg);
+    transition-duration: 1s;
+}
+
+
+#AboutUs .container .offer h3{
+    font-size: 30px;
+}
+
+#AboutUs .container .offer a{
+    letter-spacing: 1.5px;
+    font-size: 14px;
+}
+
+#AboutUs .container .offer a:hover{
+    color: var(--mainColor);
+}
