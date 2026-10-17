@@ -10,9 +10,7 @@ function addActive(currentSlide,nextSlide){
 function scrollOfNav(){
     let preScrollPos=window.scrollY;
     window.addEventListener('scroll',function () {
-        if(window.scrollY>10){
-            navEle.classList.add("scroll");
-        }
+        
         let  currentScrollPos=window.scrollY;
         if(window.scrollY>preScrollPos){
             navEle.style.transform="translateY(-100%)";
@@ -49,7 +47,7 @@ function changActiveForPopup(prevNavLink,currentNavLink){
 }
 
 function changActiveWhileScroll(section){
-    let topOfSection=section.offsetTop-navEle.clientHeight,
+    let topOfSection=section.offsetTop+navEle.clientHeight,
         heightOfSection=section.clientHeight+topOfSection,
         currentNavLink=navEle.querySelector(".nav-link.active");
     if(window.scrollY>topOfSection&&window.scrollY<heightOfSection){
@@ -57,7 +55,6 @@ function changActiveWhileScroll(section){
         navLinkOfSection=document.querySelector(`a[href='#${sectionId}']`);
         currentNavLink.classList.remove('active');
         navLinkOfSection.classList.add('active');   
-        
     }
 }
 

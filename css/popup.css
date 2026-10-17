@@ -80,11 +80,16 @@
     background-image: url("../images/bg.png");
 }
 
-.popup .body .content i {
+.popup .body .content  i {
     top: 15px;
     right: 15px;
     font-size: 20px;
 }
+
+.popup .body .content .top i {
+    color: var(--mainColor);
+}
+
 
 .popup .body .content .top>* {
     margin-bottom: 20px;
@@ -178,6 +183,7 @@
     border: 1px solid;
     border-right: var(--textColor);
     border-left: var(--textColor);
+    width: 50%;
 }
 
 .popup[data-popup-name="nav"] .body .top ul li{
@@ -209,4 +215,9 @@
 .popup[data-popup-name="nav"] .body .bottom p>span{
     width: 10px;
     height: 10px;
+}
+
+
+.popup[data-popup-name="nav"] .body .bottom a:hover{
+    color: var(--mainColor);
 }

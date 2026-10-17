@@ -12,7 +12,9 @@ let carouselSlide=document.querySelector("#sc-carousel"),
     loadingPage=document.querySelector(".loadingPage"),
     body=document.querySelector('body');
     
-    scrollOfNav();
+if(window.scrollY>10){
+    navEle.classList.add("scroll");
+}
 nextBtn.addEventListener("click",function(){
     let currentSlide=document.querySelector("#sc-carousel .sc-carousel-item.active"),
     nextSlide=currentSlide.nextElementSibling ?? carouselSlide.querySelector(".sc-carousel-item:first-child") ;

@@ -1,4 +1,9 @@
 @media (max-width: 1300px) {
+
+    
+    .navbar .navbar-brand{
+        width: 40%;
+    }
     #sc-carousel .fixed{
         width: 80px;
         height: 80px;
@@ -146,9 +151,28 @@
     .popup[data-popup-name="product"] .body .content .bottom .image p{
         font-size: 12px;
     }
+
+    .popup[data-popup-name="nav"] .body{
+        width: 290px;
+    }
+    
+    .popup[data-popup-name="nav"] .body .top ul{
+        width: 75%;
+    }
+
+    .popup[data-popup-name="nav"] .body .bottom p,
+    .popup[data-popup-name="nav"] .body .bottom p i{
+        font-size: 14px;
+    }
+
+
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
+
+    .navbar .navbar-brand{
+        width: 30%;
+    }
     .mainHeader{
         font-size: 35px;
     }
@@ -196,11 +220,13 @@
     .popup[data-popup-name="product"] .body .content .bottom .next {
         right: 10px;
     }
-
+   
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
-    
+    .navbar .navbar-brand{
+        width: 20%;
+    }
     #sc-carousel .fixed .book img{
         width: 45%;
     }
@@ -278,10 +304,25 @@
         right: 5px;
     }
     
+     .popup[data-popup-name="nav"] .body{
+        width: 400px;
+    }
+    
+    .popup[data-popup-name="nav"] .body .top ul{
+        width: 60%;
+    }
+
+    .popup[data-popup-name="nav"] .body .bottom p,
+    .popup[data-popup-name="nav"] .body .bottom p i{
+        font-size: 16px;
+    }
+
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
-
+    .navbar .navbar-brand{
+        width: 16%;
+    }
     .mainHeader{
         font-size: 45px;
     }
