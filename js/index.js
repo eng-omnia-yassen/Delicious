@@ -9,7 +9,8 @@ let carouselSlide=document.querySelector("#sc-carousel"),
     popupLinks=document.querySelectorAll(".popup[data-popup-name='nav'] ul li a"),
     navOfMenuElements=document.querySelectorAll("#Menu .navMenu li"),
     menuContainer=document.querySelectorAll("#Menu .part"),
-    loadingPage=document.querySelector(".loadingPage");
+    loadingPage=document.querySelector(".loadingPage"),
+    body=document.querySelector('body');
     
     scrollOfNav();
 nextBtn.addEventListener("click",function(){
@@ -36,9 +37,8 @@ window.addEventListener("scroll",function(){
     scrollOfNav()
     sections.forEach(function(section){
         changActiveWhileScroll(section);
+        changeActiveForPopupNav(section);
     })
-
-    
 })
 
 
@@ -69,25 +69,23 @@ navOfMenuElements.forEach(function(navEle){
         currentNavEle.classList.remove('active');
         navEle.classList.add('active')
     })
-
 })
-
-
-
-
 
 theBodiesOfPopup.forEach(function(body){
     body.addEventListener("click",function(e){
-    console.log(body)
     e.stopPropagation();
 })
 })
 
 menu(BreakFast)
 
-window.addEventListener("load",function(){
-    loadingPage.classList.add("hide");
+window.addEventListener("DOMContentLoaded",function(){
     setTimeout(function(){
-        loadingPage.classList.add("d-none");
-    },1000)
+        loadingPage.classList.add("hide");
+        loadingPage.classList.add("remove");
+    },4000)
+    setTimeout(function(){
+        body.classList.remove('overflow-hidden')
+
+    },4020)
 })

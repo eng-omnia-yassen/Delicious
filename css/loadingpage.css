@@ -15,6 +15,10 @@
     opacity: 0;
 }
 
+.loadingPage.remove{
+    display: none;
+}
+
 .loadingPage .circle{
     width: 100px;
     height: 100px;

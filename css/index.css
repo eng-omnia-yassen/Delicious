@@ -3,6 +3,7 @@
     z-index: 100;
     top: 0;
     left: 0;
+    transition-duration: .5s;
 }
 
 .navbar.scroll{
@@ -26,10 +27,14 @@
     color: var(--mainColor);
 }
 
-.navbar-light .navbar-nav a.nav-link:focus{
-    color: var(--mainColor);
-
+.navbar-light .navbar-nav a.nav-link.active:focus{
+    color:var(--mainColor) ;
 }
+
+.navbar-light .navbar-nav a.nav-link:focus{
+    color: #fff;
+}
+
 .navbar .navbar-nav a.nav-link:hover{
     color: #fff;
 }

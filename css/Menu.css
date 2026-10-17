@@ -64,6 +64,17 @@
     border-right: 2px solid var(--bs-secondary);
 }
 
+#Menu .container .content .body .part .meal{
+    opacity: 0;
+    transform: translate(-20px,-20px);
+    transition-duration: 1s;
+    transition-delay: .5s;
+}
+
+#Menu .container .content .body .part .meal.show{
+    opacity: 1;
+    transform: translate(0px,0px);
+}
 
 #Menu .container .content .body .part .meal:not(:last-child)>*{
     margin-bottom: 40px;
