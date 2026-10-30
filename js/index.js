@@ -30,7 +30,10 @@ prevBtn.addEventListener("click",function(){
 carouselIndicators.forEach(function(indicator){
     indicator.addEventListener("click",function(){
         let newSlide=carouselSlide.querySelector(`.sc-carousel-item[data-slide-number="${indicator.dataset.slideNumber}"]`),
-        currentSlide=carouselSlide.querySelector(".sc-carousel-item.active.show");
+        currentSlide=carouselSlide.querySelector(".sc-carousel-item.active.show"),
+        currentIndicator=carouselSlide.querySelector('.sc-carousel-indicators button.active');
+        currentIndicator.classList.remove('active');
+        indicator.classList.add('active');
         addActive(currentSlide,newSlide);
     })
 })
@@ -58,8 +61,10 @@ popupLinks.forEach(function(link){
     link.addEventListener('click',function(e){
         e.preventDefault();
         let currentNavLink=document.querySelector('.popup a.active');
-        closePopup()
-        window.scrollTo(0,changActiveForPopup(currentNavLink,link));
+        closePopup('nav');
+        setTimeout(() => {
+            window.scrollTo(0,changActiveForPopup(currentNavLink,link));
+        }, 500);
     })
     
 })

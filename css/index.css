@@ -92,11 +92,11 @@
 #sc-carousel .sc-carousel-indicators >*{
     padding: 5px;
     border-radius: 50%;
-    color: #fff;
+    background-color: #fff;
     border: none;
 }
 #sc-carousel .sc-carousel-indicators button.active{
-    color: var(--mainColor);
+    background-color: var(--mainColor);
 }
 
 #sc-carousel .sc-carousel-inner .sc-carousel-item{

@@ -50,8 +50,8 @@
 
     transform: translateY(-300px);
     opacity: 0;
-    transition-duration: 1s;
-    transition-delay: 1s;
+    transition-duration: .5s;
+    transition-delay: .5s;
 }
 
 
@@ -64,8 +64,8 @@
 .popup[data-popup-name="nav"] .body {
     transform: translateX(-300px);
     opacity: 0;
-    transition-duration: 1s;
-    transition-delay: 1s;
+    transition-duration: .5s;
+    transition-delay: .5s;
 }
 
 .popup[data-popup-name="nav"].show .body{
@@ -102,6 +102,11 @@
 
 .popup[data-popup-name="book"] .body .content .top a:hover{
     color: var(--mainColor);
+}
+
+.popup[data-popup-name="book"] .body .content .bottom form input,
+.popup[data-popup-name="book"] .body .content .bottom form textarea{
+    cursor: pointer;
 }
 
 .popup[data-popup-name="product"] .body .content .top .mainHeader {
@@ -174,6 +179,12 @@
     font-weight: bold;
 }
 
+popup[data-popup-name="nav"] .body{
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
 .popup[data-popup-name="nav"] .body .top .circleImg{
     width: 40%;

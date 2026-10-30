@@ -42,13 +42,13 @@ function changActiveForPopup(prevNavLink,currentNavLink){
     currentNavLink.classList.add('active');
     currentNavLink.classList.add('squares');   
     let sectionId=currentNavLink.getAttribute('href'),
-        topOfSection=document.querySelector(sectionId).offsetTop-navEle.clientHeight+1;
+        topOfSection=document.querySelector(sectionId).offsetTop;
     return topOfSection;
 }
 
 function changActiveWhileScroll(section){
     let topOfSection=section.offsetTop+navEle.clientHeight,
-        heightOfSection=section.clientHeight+topOfSection,
+        heightOfSection=section.clientHeight+topOfSection-navEle.clientHeight+1,
         currentNavLink=navEle.querySelector(".nav-link.active");
     if(window.scrollY>topOfSection&&window.scrollY<heightOfSection){
         let sectionId=section.getAttribute("id"),
@@ -173,7 +173,7 @@ function showProduct(productId,typeOfMeal){
                 <div class="next position-absolute" onclick="nextProductPopup(${meal.id},${meal.type})">
                     <i class="fa-solid fa-chevron-right" ></i>
                 </div>
-                <p class="position-absolute">$35.92</p>
+                <p class="position-absolute">${meal.price}</p>
             </div>
             <p class="text-start">${meal.description}</p>
         </div>
@@ -213,8 +213,8 @@ function openPopup(popupName){
     }, 10);
 }
 
-function closePopup(){
-    let popupEle=document.querySelector(`.popup.active`);
+function closePopup(popupName){
+    let popupEle=document.querySelector(`.popup[data-popup-name=${popupName}]`);
     popupEle.classList.remove("show");
     setTimeout(function(){
         popupEle.classList.remove("active")
