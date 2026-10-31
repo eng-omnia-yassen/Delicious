@@ -75,6 +75,18 @@ function changeActiveForPopupNav(section){
     }
 }
 
+function updateIndicators(nextSlide){
+    carouselIndicators.forEach(function(indicator,index){
+        currentIndicator=carouselSlide.querySelector(".sc-carousel-indicators button.active")
+        if(indicator.dataset.slideNumber==nextSlide.dataset.slideNumber){
+            indicator.classList.add('active');
+            currentIndicator.classList.remove('active')
+
+        }
+    })
+    
+}
+
 function navOfMenu(typeOfMeal){
     if(typeOfMeal=="BreakFast"){
         menu(BreakFast)

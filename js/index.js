@@ -19,12 +19,15 @@ nextBtn.addEventListener("click",function(){
     let currentSlide=document.querySelector("#sc-carousel .sc-carousel-item.active"),
     nextSlide=currentSlide.nextElementSibling ?? carouselSlide.querySelector(".sc-carousel-item:first-child") ;
     addActive(currentSlide,nextSlide);
+    
+    updateIndicators(nextSlide)
 })
     
 prevBtn.addEventListener("click",function(){
         let currentSlide=document.querySelector("#sc-carousel .sc-carousel-item.active"),
         previousSlide=currentSlide.previousElementSibling ?? carouselSlide.querySelector(".sc-carousel-item:last-child") ;
     addActive(currentSlide,previousSlide)
+    updateIndicators(previousSlide)
 })
 
 carouselIndicators.forEach(function(indicator){
