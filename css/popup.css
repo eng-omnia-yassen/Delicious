@@ -65,10 +65,10 @@
     transform: translateX(-300px);
     opacity: 0;
     transition-duration: .5s;
-    transition-delay: .5s;
 }
 
 .popup[data-popup-name="nav"].show .body{
+    transition-delay: .5s;
     transform: translate(0);
     opacity: 1;
 }
